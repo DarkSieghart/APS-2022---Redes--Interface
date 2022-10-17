@@ -1,0 +1,18 @@
+package ChatAPS;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String  ip = (String)JOptionPane.showInputDialog("Informe o IP","172.16.254.");
+        int porta = Integer.parseInt(JOptionPane.showInputDialog("Informe a Porta","4000"));
+
+        Conexao c = new Conexao(ip, porta);
+
+        Interface j = new Interface(c);
+        j.setLocationRelativeTo(null);
+        j.setVisible(true);
+    }
+
+}
